@@ -54,7 +54,6 @@ def quadratic_factoring(a,b,c):
         print("Solutions are imaginary")
     return
 
-    
 # This function takes in a, b, and c from the equation:
 # ax^2 + bx + c
 # and prints out the factorization if there is one
