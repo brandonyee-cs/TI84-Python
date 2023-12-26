@@ -53,11 +53,24 @@ def quadratic_solve(a,b,c):
     print ("The Solutions Are:",sol1,"and",sol2)
     print ('Remember Solutions Are Always Opposite')
 
+def quadratic_vertex_form(a,b,c):
+    if a != 1: b /= a; xcoord= b/2; ycoord = c - a * (xcoord)
+    else: xcoord = b/2; ycoord = c -(xcoord)
+    if xcoord > 0: xsign = "+"
+    else: xsign = ""
+    if ycoord > 0: ysign = "+"
+    else: ysign = "" 
+
+    print(f"{a}(x {xsign} {xcoord}) {ysign} {ycoord}")
+    
+
 def distance_formula(x1,x2,y1,y2):
     distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
     print ("The Distance Is:",distance)
 
 question = int(input("1 for Factoring 2 for Solving 3 for Distance: "))
+
+
 if (question == 1):
     a = float(input("Enter A Value: "))
     b = float(input("Enter B Value: "))
@@ -74,4 +87,7 @@ elif (question == 3):
     c = float(input("Enter Y1"))
     d = float(input("Enter Y2"))
     distance_formula(b,a,d,c)
- 
+elif question == 4:
+    a = float(input('Enter the value of a'))
+    b = float(input('Enter the value of b'))
+    c = float(input('Enter the value of c')) 
